@@ -166,10 +166,18 @@ body {
   color: white;
 }
 
+.primary-btn:hover {
+  transform: translateY(-3px);
+}
+
 .secondary-btn {
   border: 1px solid rgba(255, 255, 255, 0.1);
 
   color: white;
+}
+
+.secondary-btn:hover {
+  border-color: #3b82f6;
 }
 
 .read-btn {
@@ -180,6 +188,10 @@ body {
   background: rgba(59, 130, 246, 0.15);
 
   color: #93c5fd;
+}
+
+.read-btn:hover {
+  background: rgba(59, 130, 246, 0.25);
 }
 
 /* SECTIONS */
@@ -212,7 +224,7 @@ body {
   font-size: 42px;
 }
 
-/* GLASS CARD */
+/* CARDS */
 
 .glass-card,
 .card,
@@ -225,17 +237,14 @@ body {
   padding: 35px;
 
   border-radius: 22px;
+
+  transition: 0.3s ease;
 }
 
-.cards,
-.writing-grid {
-
-  display: grid;
-
-  grid-template-columns:
-    repeat(auto-fit, minmax(320px, 1fr));
-
-  gap: 25px;
+.card:hover,
+.writing-card:hover {
+  transform: translateY(-6px);
+  border-color: #3b82f6;
 }
 
 /* TIMELINE */
@@ -268,7 +277,20 @@ body {
   top: 5px;
 }
 
-/* WRITING */
+/* GRID */
+
+.cards,
+.writing-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 25px;
+}
+
+/* WRITINGS */
 
 .writing-type {
   color: #60a5fa;
@@ -307,6 +329,10 @@ body {
   text-decoration: none;
 }
 
+.contact-card a:hover {
+  color: #60a5fa;
+}
+
 /* FOOTER */
 
 footer {
@@ -324,6 +350,69 @@ footer {
   font-size: 14px;
 
   color: #94a3b8;
+}
+
+/* ARTICLE PAGES */
+
+.article-page {
+  min-height: 100vh;
+}
+
+.article-container {
+  max-width: 900px;
+}
+
+.article-header {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.article-category {
+  color: #60a5fa;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+
+  font-size: 13px;
+
+  margin-bottom: 20px;
+}
+
+.article-header h1 {
+  font-size: 54px;
+
+  line-height: 1.2;
+
+  margin-bottom: 20px;
+}
+
+.article-subtitle {
+  color: #cbd5e1;
+
+  font-size: 24px;
+
+  font-weight: 400;
+}
+
+.article-content {
+  padding: 50px;
+}
+
+.article-content p {
+  color: #d1d5db;
+
+  margin-bottom: 28px;
+
+  font-size: 18px;
+}
+
+.article-content h3 {
+  margin-top: 40px;
+
+  margin-bottom: 20px;
+
+  font-size: 28px;
 }
 
 /* RESPONSIVE */
@@ -346,6 +435,26 @@ footer {
 
   .hero-text {
     font-size: 18px;
+  }
+
+  .section-heading h2 {
+    font-size: 32px;
+  }
+
+  .article-header h1 {
+    font-size: 36px;
+  }
+
+  .article-subtitle {
+    font-size: 20px;
+  }
+
+  .article-content {
+    padding: 30px;
+  }
+
+  .article-content p {
+    font-size: 17px;
   }
 
 }
